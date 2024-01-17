@@ -19,3 +19,6 @@ function removeEl() {
   data.length = data.length - 1;
   console.warn(data);
 }
+// splice method
+data.splice(2, 1);
+console.warn(data);

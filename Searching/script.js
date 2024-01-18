@@ -9,16 +9,12 @@ for (i = 0; i <= data.length - 1; i++) {
     break;
   }
 }
-// console.warn(index);
+console.warn(index);
 // console.warn(data.indexOf(item));
 // data.splice(2, 1);
 // console.warn(data);
 
 // Dynamic way
-function alert(str) {
-  const item = document.getElementById("output");
-  item.innerText = str;
-}
 function searchElement() {
   let data = [20, 40, 60, 5, 10, 70, 80, 99];
   let item = document.getElementById("searchEl").value;
@@ -35,7 +31,7 @@ function searchElement() {
 }
 
 // interview question
-//  serach duplicate elements
+//  search duplicate elements
 let array = [20, 40, 60, 5, 10, 70, 80, 99, 100, 70];
 let value = 70;
 //let index=undefined;
@@ -45,5 +41,5 @@ for (let i = 0; i <= array.length - 1; i++) {
     result[result.length] = i;
   }
 
-  // console.log(result);
+  console.log(result);
 }

@@ -35,7 +35,7 @@ console.log(fibonacci(5)); // 5
 console.log(fibonacci(7)); // 13
 console.log(fibonacci(10)); // 55
 
-// // 2.Sum of Natural Numbers
+// 2.Sum of Natural Numbers
 function sumOfNaturalNumbers(n) {
   if (n <= 0) {
     return 0;

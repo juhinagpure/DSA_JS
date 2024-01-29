@@ -38,17 +38,3 @@ function headFibonacci(n) {
 
 // Example usage
 console.log(headFibonacci(7)); // Output: 13
-
-// Tail Recursion (Fibonacci Sequence):
-function tailFibonacci(n, a = 0, b = 1) {
-  if (n === 0) {
-    return a;
-  }
-  if (n === 1) {
-    return b;
-  }
-  return tailFibonacci(n - 1, b, a + b);
-}
-
-// Example usage
-console.log(tailFibonacci(7)); // Output: 13

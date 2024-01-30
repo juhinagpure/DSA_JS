@@ -52,3 +52,18 @@ function tailFibonacci(n, a = 0, b = 1) {
 
 // Example usage
 console.log(tailFibonacci(7)); // Output: 13
+
+// towerOfHanoi
+function towerOfHanoi(n, from_rod, to_rod, aux_rod) {
+  if (n === 1) {
+    console.log("Move disk 1 from rod " + from_rod + " to rod " + to_rod);
+    return;
+  }
+  towerOfHanoi(n - 1, from_rod, aux_rod, to_rod);
+  console.log("Move disk " + n + " from rod " + from_rod + " to rod " + to_rod);
+  towerOfHanoi(n - 1, aux_rod, to_rod, from_rod);
+}
+
+// Example usage
+var numberOfDisks = 3;
+towerOfHanoi(numberOfDisks, "A", "C", "B"); // A, B and C are names of rods

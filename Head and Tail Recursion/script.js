@@ -54,6 +54,7 @@ function tailFibonacci(n, a = 0, b = 1) {
 console.log(tailFibonacci(7)); // Output: 13
 
 // towerOfHanoi
+// basic problems
 function towerOfHanoi(n, from_rod, to_rod, aux_rod) {
   if (n === 1) {
     console.log("Move disk 1 from rod " + from_rod + " to rod " + to_rod);

@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Stack with inputs</h1>
-    <input type="text" placeholder="Enter Stack Element" id="newEl" />
-    <button onclick="push()">Add Element to Stack</button>
-    <button onclick="pop()">Remove Element to Stack</button>
-    <button onclick="display()">Display All Element of Stack</button>
+    <div class="input-container">
+      <input type="text" placeholder="Enter Stack Element" id="element-input" />
+      <button onclick="push()">Push Element</button>
+      <button onclick="pop()">Pop Element</button>
+    </div>
+
+    <div id="stack-container" class="stack"></div>
+
     <script src="stack_with_input.js"></script>
   </body>
 </html>

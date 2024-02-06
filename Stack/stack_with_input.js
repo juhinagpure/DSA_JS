@@ -1,28 +1,42 @@
-let data = [];
-let currentSize = data.length;
+let stack = [];
+let currentIndex = -1;
 let max = 5;
+
+const inputElement = document.getElementById("element-input");
+const stackElement = document.getElementById("stack-container");
+
 function push() {
-  let newVal = document.getElementById("newEl").value;
-  if (currentSize >= max) {
-    alert("Stack is full you can not add " + newVal);
+  const val = inputElement.value;
+  if (!val) return alert("Enter input element!");
+
+  if (currentIndex + 1 >= max) {
+    alert("Stack is full you can not add " + val);
   } else {
-    data[currentSize] = newVal;
-    currentSize += 1;
-    document.getElementById("newEl").value = "";
-    console.warn("element added");
+    currentIndex += 1;
+    stack[currentIndex] = val;
+
+    const spanElement = document.createElement("span");
+    spanElement.innerText = val;
+    spanElement.id = `element-${currentIndex}-${val}`;
+    spanElement.style.order = max - currentIndex;
+
+    stackElement.appendChild(spanElement);
+
+    inputElement.value = "";
+    inputElement.focus();
   }
 }
 
 function pop() {
-  if (currentSize > 0) {
-    currentSize -= 1;
-    data.length = currentSize;
+  if (currentIndex > -1) {
+    const popVal = stack[currentIndex];
+    const currentSpanElement = document.getElementById(
+      `element-${currentIndex}-${popVal}`
+    );
+    currentSpanElement.remove();
+    currentIndex -= 1;
+    stack.length = currentIndex + 1;
   } else {
     alert("stack is already empty");
-  }
-}
-function display() {
-  for (let i = 0; i <= currentSize - 1; i++) {
-    console.warn("el. no", i, "and value is ", data[i]);
   }
 }

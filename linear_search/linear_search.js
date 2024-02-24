@@ -11,6 +11,7 @@
 // if (!pos) {
 //   alert("Element not found");
 // }
+
 function searchEl() {
   let data = [30, 13, 45, 78, 2, 9, 5, 50];
   let find = parseInt(document.getElementById("el").value, 10);

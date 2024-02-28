@@ -39,6 +39,7 @@ h1 {
 #result {
   margin: 30px 410px;
   font-weight: bold;
-  color: #be185d;
+  /* color: #be185d; */
+  color: red;
   font-size: 20px;
 }
